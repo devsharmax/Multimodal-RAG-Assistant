@@ -1,6 +1,6 @@
 # Multimodal RAG based AI System
 
-An end-to-end implementation of "Multimodal Retrieval-Augmented Generation (RAG) based AI System"*.
+An end-to-end implementation of "Multimodal Retrieval-Augmented Generation (RAG) based AI System".
 You upload PDFs, ask questions in natural language, and get answers grounded in the documents' **text, tables, and figures**. Every answer cites the document, page, and content type it came from.
 
 Stack: **Python · FastAPI · LangChain · Streamlit · PyMuPDF · Sentence-Transformers · CLIP · Pinecone · Llama 3.1 / Mistral via the Hugging Face Inference API**. Every cloud component also has a free local fallback, so the project runs on an 8 GB laptop without any API keys.
