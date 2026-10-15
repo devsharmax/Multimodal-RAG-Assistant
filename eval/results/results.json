@@ -1,0 +1,1333 @@
+{
+ "retrieval": {
+  "sentence-transformers/all-MiniLM-L6-v2": {
+   "dense": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.6666666666666666,
+     "hit@3": 0.8571428571428571,
+     "hit@5": 0.8809523809523809,
+     "mrr@10": 0.7680555555555555
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7142857142857143,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8571428571428571
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.7692307692307693,
+      "hit@3": 0.8461538461538461,
+      "hit@5": 0.9230769230769231,
+      "mrr@10": 0.823076923076923
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.5333333333333333,
+      "hit@3": 0.7333333333333333,
+      "hit@5": 0.7333333333333333,
+      "mrr@10": 0.6372222222222222
+     }
+    },
+    "latency_ms": {
+     "mean": 24.666098306798155,
+     "p95": 11.708250036463141
+    },
+    "misses": [
+     "Which new market does Aurora plan to enter?",
+     "How often must the emergency stop circuit be tested?",
+     "What is the pose repeatability of the arm?",
+     "Which modalities are out of scope for the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "dense+bm25": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.6904761904761905,
+     "hit@3": 0.9523809523809523,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.8142857142857144
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7142857142857143,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8571428571428571
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.7692307692307693,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8589743589743589
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.6,
+      "hit@3": 0.8666666666666667,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.7355555555555555
+     }
+    },
+    "latency_ms": {
+     "mean": 10.613277779027287,
+     "p95": 11.426416924223304
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "dense+bm25+clip": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.47619047619047616,
+     "hit@3": 0.8095238095238095,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.6496031746031745
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.3076923076923077,
+      "hit@3": 0.6153846153846154,
+      "hit@5": 1.0,
+      "mrr@10": 0.5282051282051282
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.13333333333333333,
+      "hit@3": 0.8,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.4277777777777778
+     }
+    },
+    "latency_ms": {
+     "mean": 25.065872984539187,
+     "p95": 28.93454092554748
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "hybrid+rerank": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9047619047619048,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9484126984126985
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7857142857142857,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8928571428571429
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 553.7183928619405,
+     "p95": 671.6603750828654
+    },
+    "misses": []
+   },
+   "hybrid+rerank+prior0.3": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.8571428571428571,
+     "hit@3": 0.9523809523809523,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.9047619047619048
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.8461538461538461,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9230769230769231
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.8666666666666667,
+      "hit@3": 0.8666666666666667,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.8666666666666667
+     }
+    },
+    "latency_ms": {
+     "mean": 551.0150247940883,
+     "p95": 670.4608330037445
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "full (+modality routing)": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9285714285714286,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9603174603174603
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 550.2030266964409,
+     "p95": 664.111457997933
+    },
+    "misses": []
+   },
+   "full, reranker=ms-marco-MiniLM-L-6-v2": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.8809523809523809,
+     "hit@3": 0.9761904761904762,
+     "hit@5": 1.0,
+     "mrr@10": 0.9305555555555556
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7857142857142857,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.880952380952381
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.8666666666666667,
+      "hit@3": 0.9333333333333333,
+      "hit@5": 1.0,
+      "mrr@10": 0.9166666666666666
+     }
+    },
+    "latency_ms": {
+     "mean": 191.10731537997103,
+     "p95": 225.82270798739046
+    },
+    "misses": []
+   },
+   "full, reranker=bge-reranker-base": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9285714285714286,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9603174603174603
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 547.7073977124834,
+     "p95": 668.5272080358118
+    },
+    "misses": []
+   }
+  },
+  "BAAI/bge-small-en-v1.5": {
+   "dense": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.6904761904761905,
+     "hit@3": 0.8809523809523809,
+     "hit@5": 0.9047619047619048,
+     "mrr@10": 0.7916666666666666
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7142857142857143,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8571428571428571
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.6153846153846154,
+      "hit@3": 0.9230769230769231,
+      "hit@5": 1.0,
+      "mrr@10": 0.7628205128205128
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.7333333333333333,
+      "hit@3": 0.7333333333333333,
+      "hit@5": 0.7333333333333333,
+      "mrr@10": 0.7555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 16.807198424690537,
+     "p95": 17.31262495741248
+    },
+    "misses": [
+     "What cumulative capacity target has the board set for 2026?",
+     "Which new market does Aurora plan to enter?",
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "dense+bm25": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.7142857142857143,
+     "hit@3": 0.9523809523809523,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.8174603174603176
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7142857142857143,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8571428571428571
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.6923076923076923,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8205128205128205
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.7333333333333333,
+      "hit@3": 0.8666666666666667,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.7777777777777778
+     }
+    },
+    "latency_ms": {
+     "mean": 17.024726113526242,
+     "p95": 17.37870799843222
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "dense+bm25+clip": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.5476190476190477,
+     "hit@3": 0.8333333333333334,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.6884920634920635
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.23076923076923078,
+      "hit@3": 0.6923076923076923,
+      "hit@5": 1.0,
+      "mrr@10": 0.5
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.4,
+      "hit@3": 0.8,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.5611111111111111
+     }
+    },
+    "latency_ms": {
+     "mean": 33.13690876876492,
+     "p95": 36.36566596105695
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "hybrid+rerank": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9047619047619048,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9484126984126985
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7857142857142857,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8928571428571429
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 582.0545644798715,
+     "p95": 684.3056250363588
+    },
+    "misses": []
+   },
+   "hybrid+rerank+prior0.3": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.8333333333333334,
+     "hit@3": 0.9523809523809523,
+     "hit@5": 0.9523809523809523,
+     "mrr@10": 0.8928571428571429
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 0.7692307692307693,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.8846153846153846
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.8666666666666667,
+      "hit@3": 0.8666666666666667,
+      "hit@5": 0.8666666666666667,
+      "mrr@10": 0.8666666666666667
+     }
+    },
+    "latency_ms": {
+     "mean": 600.905172731949,
+     "p95": 734.7997919423506
+    },
+    "misses": [
+     "Who is the faculty mentor of the project?",
+     "What is the title of the paper that introduced CLIP?"
+    ]
+   },
+   "full (+modality routing)": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9285714285714286,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9603174603174603
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 708.8787727767512,
+     "p95": 930.2481249906123
+    },
+    "misses": []
+   },
+   "full, reranker=ms-marco-MiniLM-L-6-v2": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.8809523809523809,
+     "hit@3": 0.9761904761904762,
+     "hit@5": 1.0,
+     "mrr@10": 0.9305555555555556
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.7857142857142857,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.880952380952381
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.8666666666666667,
+      "hit@3": 0.9333333333333333,
+      "hit@5": 1.0,
+      "mrr@10": 0.9166666666666666
+     }
+    },
+    "latency_ms": {
+     "mean": 186.06676688761496,
+     "p95": 234.872208093293
+    },
+    "misses": []
+   },
+   "full, reranker=bge-reranker-base": {
+    "overall": {
+     "n": 42,
+     "hit@1": 0.9285714285714286,
+     "hit@3": 1.0,
+     "hit@5": 1.0,
+     "mrr@10": 0.9603174603174603
+    },
+    "by_modality": {
+     "image": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9285714285714286
+     },
+     "table": {
+      "n": 13,
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 1.0
+     },
+     "text": {
+      "n": 15,
+      "hit@1": 0.9333333333333333,
+      "hit@3": 1.0,
+      "hit@5": 1.0,
+      "mrr@10": 0.9555555555555556
+     }
+    },
+    "latency_ms": {
+     "mean": 602.5535426562695,
+     "p95": 711.6196249844506
+    },
+    "misses": []
+   }
+  }
+ },
+ "generation": {
+  "extractive": {
+   "answer_accuracy": 0.717948717948718,
+   "by_modality": {
+    "image": 0.5454545454545454,
+    "table": 0.6923076923076923,
+    "text": 0.8666666666666667
+   },
+   "citation_accuracy": 0.8717948717948718,
+   "abstention_accuracy": 0.0,
+   "latency_s": {
+    "p50": 0.7605,
+    "p95": 1.216
+   },
+   "rows": [
+    {
+     "question": "Who is the CEO of Aurora Solar?",
+     "modality": "text",
+     "answer": "Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people at the end of the year. [1] Our Chief Executive Officer, Priya Raghunathan, joined the company in 2021 and has led its expansion from a regional installer into a pan-European solar developer. [1]",
+     "latency_s": 0.553,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Where is Aurora Solar headquartered?",
+     "modality": "text",
+     "answer": "Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people at the end of the year. [1]",
+     "latency_s": 1.558,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How many employees did Aurora Solar have at the end of 2025?",
+     "modality": "text",
+     "answer": "Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people at the end of the year. [1]",
+     "latency_s": 0.98,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was Aurora Solar's revenue in Q3 2025?",
+     "modality": "table",
+     "answer": "|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q3 2025|231.9|12.2%|502| [1]",
+     "latency_s": 1.331,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What net margin did Aurora report for Q4 2025?",
+     "modality": "table",
+     "answer": "|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q4 2025|248.3|12.8%|540| [1]",
+     "latency_s": 0.692,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How many MW of new installations were added in Q2 2025?",
+     "modality": "table",
+     "answer": "620MW [2] 237MW [2]",
+     "latency_s": 0.671,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "Which region had the highest installed capacity in 2025?",
+     "modality": "image",
+     "answer": "Text in figure: Installed capacity by region, 2025 (MW) [1] Figure 1: Installed capacity by region (MW), 2025\n4. [2]",
+     "latency_s": 0.674,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "What installed capacity did Iberia reach in 2025?",
+     "modality": "image",
+     "answer": "620MW [1] 237MW [1]",
+     "latency_s": 0.776,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "What share of revenue came from the residential segment?",
+     "modality": "image",
+     "answer": "Residential 46% [1] Commercial [1]",
+     "latency_s": 0.772,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was the average module efficiency in 2025?",
+     "modality": "image",
+     "answer": "Technology\nModule efficiency is a key driver of the levelised cost of energy. [1] Figure 3: Average deployed module efficiency, 2019-2025 [2]",
+     "latency_s": 0.673,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "What cumulative capacity target has the board set for 2026?",
+     "modality": "text",
+     "answer": "Outlook\nFor 2026, the board has set a target of 3.1 GW of cumulative installed capacity and plans to enter the Polish market in the second half of the year. [1]",
+     "latency_s": 0.71,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which new market does Aurora plan to enter?",
+     "modality": "text",
+     "answer": "|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q1 2025|182.4|9.1%|410| [3]",
+     "latency_s": 0.705,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "Which firmware version ships with the Helix R7?",
+     "modality": "text",
+     "answer": "Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving and light assembly. [1] Units ship with controller firmware HX-OS 4.2.1. [1]",
+     "latency_s": 0.821,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How often must the emergency stop circuit be tested?",
+     "modality": "text",
+     "answer": "Safety\nThe emergency stop circuit must be functionally tested every 250 operating hours and after any collision. [1]",
+     "latency_s": 0.725,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the maximum payload of the Helix R7?",
+     "modality": "table",
+     "answer": "|Parameter|Value| |Maximum payload|7 kg| [1] Helix R7 joint layout and maximum joint speeds\nJoint speeds measured at rated payload\nFigure 2: Joint layout of the Helix R7 [2]",
+     "latency_s": 0.649,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the pose repeatability of the arm?",
+     "modality": "table",
+     "answer": "|Parameter|Value| |Pose repeatability|\u00b10.02 mm| [1]",
+     "latency_s": 1.022,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What IP rating does the Helix R7 have?",
+     "modality": "table",
+     "answer": "Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving and light assembly. [2]",
+     "latency_s": 0.733,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "Which step comes right after the self-test in the controller startup sequence?",
+     "modality": "image",
+     "answer": "Startup\nWhen the controller boots it executes a fixed sequence of steps before any program can run. [2]",
+     "latency_s": 0.9,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What is the maximum speed of joint J3?",
+     "modality": "image-vector",
+     "answer": "Text in figure: J1 Base 120\u00b0/s J2 Shoulder 120\u00b0/s J3 Elbow 180\u00b0/s J4 Wrist roll 250\u00b0/s J5 Wrist pitch 250\u00b0/s J6 Flange 320\u00b0/s [1]",
+     "latency_s": 0.725,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which joint is the shoulder?",
+     "modality": "image-vector",
+     "answer": "Text in figure: J1 Base 120\u00b0/s J2 Shoulder 120\u00b0/s J3 Elbow 180\u00b0/s J4 Wrist roll 250\u00b0/s J5 Wrist pitch 250\u00b0/s J6 Flange 320\u00b0/s [1]",
+     "latency_s": 0.892,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What does error code E204 mean?",
+     "modality": "table",
+     "answer": "|Error code|Meaning|Corrective action| |E204|Encoder fault|Recalibrate the joint encoder| [1]",
+     "latency_s": 0.892,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How do I fix error E305?",
+     "modality": "table",
+     "answer": "|Error code|Meaning|Corrective action| |E305|Communication timeout|Check the EtherCAT cable| [1]",
+     "latency_s": 0.772,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How many monitoring stations were sampled on the Tamsin River?",
+     "modality": "text",
+     "answer": "Background\nSamples were collected from 14 monitoring stations along the Tamsin River between March and October 2024, giving 1,176 laboratory analyses in total. [1]",
+     "latency_s": 0.626,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which station had the highest mean nitrate concentration?",
+     "modality": "image",
+     "answer": "Results\nNitrate concentrations varied substantially between upstream and downstream stations. [1] S1 S2 S3 S4 S5 S6 [2]",
+     "latency_s": 0.639,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What nitrate limit is marked on the nitrate chart?",
+     "modality": "image",
+     "answer": "Limit10mg/L [1] mg/L 6 6.8 5.3 [1]",
+     "latency_s": 0.688,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was the mean turbidity measured in the study?",
+     "modality": "table",
+     "answer": "|Parameter|Mean value|Unit| |Turbidity|4.6|NTU| [1]",
+     "latency_s": 0.696,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was the mean dissolved oxygen level?",
+     "modality": "table",
+     "answer": "|Parameter|Mean value|Unit| |Dissolved oxygen|7.9|mg/L| [1]",
+     "latency_s": 0.639,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which treatment plant does the study recommend upgrading?",
+     "modality": "text",
+     "answer": "The study recommends upgrading the Millbrook treatment plant with tertiary nutrient removal by 2027. [1]",
+     "latency_s": 0.782,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which vector database does the multimodal RAG system use?",
+     "modality": "text",
+     "answer": "This project, Multimodal RAG based AI System, focuses on designing and implementing such a system using tools that are widely adopted in the current Generative AI industry and available free of cost \u2014 LangChain for pipeline orchestration, Hugging Face Sentence-Transformers and CLIP for embeddings, Pinecone as the vector database, and an open-source LLM (e.g., Llama 3.1 or Mistral) served via the Hugging Face Inference API for generation \u2014 so that a beginner learns the same, industry-standard building blocks used in real-world, production multimodal RAG systems, without depending on paid proprietary APIs. [1] The project is built entirely on tools that are widely adopted in the current Generative AI industry and free to use: LangChain for orchestrating the retrieval-generation pipeline, open-source Hugging Face models (Sentence-Transformers and CLIP) for text and image embeddings, Pinecone as the vector database, and an open-source LLM (such as Meta Llama 3.1 or Mistral) served through the Hugging Face Inference API for answer generation. [2]",
+     "latency_s": 0.903,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which text embedding model is specified in the technology stack?",
+     "modality": "table",
+     "answer": "|11 Technology Stack|Col2| | **Text Embedding Model**|Hugging Face Sentence-Transformers \u2014 all-MiniLM-L6-v2 (free, open-source, widely used)| [1] |11 Technology Stack|Col2| |**Image Embedding Model**|CLIP \u2014 via Hugging Face Transformers (free, open-source vision- language embedding model)| [1]",
+     "latency_s": 1.238,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What backend framework is used?",
+     "modality": "table",
+     "answer": "6.7 User Interface Module\nA Streamlit-based web interface \u2014 one of the most widely used frameworks for building AI application front-ends \u2014 allows the user to upload documents, ask questions in natural language, and view the generated answer alongside its cited sources in a chat-like format. [3]",
+     "latency_s": 0.771,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What is the minimum RAM requirement?",
+     "modality": "text",
+     "answer": "\u25cf RAM: Minimum 8 GB. [1] \u25cf Storage: Minimum 5 GB available space. [1]",
+     "latency_s": 0.744,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Over how many weeks will the project be completed?",
+     "modality": "text",
+     "answer": "15 Work Plan\nThe project will be completed over a 12-week schedule spanning nine phases, from requirement analysis through to final documentation. [1] Text in figure: ProjectWorkPlan-GanttChart(12-WeekSchedule) [2]",
+     "latency_s": 0.914,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "In the Gantt chart, which phase is scheduled for weeks 7-8?",
+     "modality": "image",
+     "answer": "Phase 6:Frontend Interface&End-to-End Integration Wk 7-8 [1] The Gantt chart below shows the planned duration and sequencing of each phase by project week. [2]",
+     "latency_s": 0.793,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "In the system architecture diagram, which layer sits between the Backend API and the document parser?",
+     "modality": "image",
+     "answer": "BackendAPI [1] The general flow of the system is as follows:\nUser \u2192 Uploads Document \u2192 Document Parser \u2192 Multimodal Embedding Engine \u2192 Vector Database (storage). [2]",
+     "latency_s": 1.216,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "Who is the faculty mentor of the project?",
+     "modality": "text",
+     "answer": "Manisha Jangid Faculty Mentor [1]",
+     "latency_s": 0.759,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which modalities are out of scope for the project?",
+     "modality": "text",
+     "answer": "The system is intended as an educational and demonstrative implementation rather than a production- scale enterprise deployment; nonetheless, its modular design keeps it extensible toward those directions in the future. [1] 5 Scope of the Project\nThe scope of the proposed project covers the design and implementation of a multimodal RAG pipeline, built on widely used industry-standard tools, operating on user-supplied PDF documents in a controlled, single-user (or small-group) demonstration environment. [2]",
+     "latency_s": 0.762,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the title of the paper that introduced CLIP?",
+     "modality": "text",
+     "answer": "\u201cLearning Transferable Visual Models from Natural Language Supervision (CLIP).\u201d arXiv:2103.00020. [3]",
+     "latency_s": 1.054,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which PDF parsing library is used?",
+     "modality": "table",
+     "answer": "It uses a PDF-parsing library to walk through each page, extracting raw text, embedded images, and basic tabular structures, and tags each extracted item with metadata such as source filename, page number, and content type. [1] The general flow of the system is as follows:\nUser \u2192 Uploads Document \u2192 Document Parser \u2192 Multimodal Embedding Engine \u2192 Vector Database (storage). [3]",
+     "latency_s": 0.895,
+     "correct": false,
+     "citation_ok": true
+    },
+    {
+     "question": "What dividend per share did Aurora Solar pay in 2025?",
+     "modality": "unanswerable",
+     "answer": "Aurora Solar ASA - Annual Report 2025\n1. [2]",
+     "latency_s": 0.632,
+     "correct": false
+    },
+    {
+     "question": "What is the battery life of the Helix R7 teach pendant?",
+     "modality": "unanswerable",
+     "answer": "Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving and light assembly. [1]",
+     "latency_s": 0.701,
+     "correct": false
+    },
+    {
+     "question": "What was the mercury concentration in the Tamsin River?",
+     "modality": "unanswerable",
+     "answer": "Background\nSamples were collected from 14 monitoring stations along the Tamsin River between March and October 2024, giving 1,176 laboratory analyses in total. [1]",
+     "latency_s": 0.707,
+     "correct": false
+    }
+   ],
+   "llm": "extractive (no LLM)",
+   "embedding": "BAAI/bge-small-en-v1.5"
+  },
+  "local": {
+   "answer_accuracy": 0.8974358974358975,
+   "by_modality": {
+    "image": 0.7272727272727273,
+    "table": 0.9230769230769231,
+    "text": 1.0
+   },
+   "citation_accuracy": 0.5641025641025641,
+   "abstention_accuracy": 1.0,
+   "latency_s": {
+    "p50": 54.3905,
+    "p95": 146.526
+   },
+   "rows": [
+    {
+     "question": "Who is the CEO of Aurora Solar?",
+     "modality": "text",
+     "answer": "The CEO of Aurora Solar is Priya Raghunathan. [1]",
+     "latency_s": 70.698,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Where is Aurora Solar headquartered?",
+     "modality": "text",
+     "answer": "Aurora Solar ASA is headquartered in Bergen, Norway. [1]",
+     "latency_s": 52.069,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How many employees did Aurora Solar have at the end of 2025?",
+     "modality": "text",
+     "answer": "At the end of 2025, Aurora Solar ASA had 4,850 employees. [1]",
+     "latency_s": 38.197,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was Aurora Solar's revenue in Q3 2025?",
+     "modality": "table",
+     "answer": "According to Table 1 in the provided document, Aurora Solar's revenue in Q3 2025 was $231.9 million.",
+     "latency_s": 49.985,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What net margin did Aurora report for Q4 2025?",
+     "modality": "table",
+     "answer": "According to Table 1 in the provided document, Aurora reported a net margin of 12.8% for Q4 2025.",
+     "latency_s": 52.111,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "How many MW of new installations were added in Q2 2025?",
+     "modality": "table",
+     "answer": "According to Table 1, in Q2 2025, 455 MW of new installations were added.",
+     "latency_s": 43.789,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "Which region had the highest installed capacity in 2025?",
+     "modality": "image",
+     "answer": "According to Figure 1, Nordics had the highest installed capacity in 2025 with 620 MW.",
+     "latency_s": 46.718,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What installed capacity did Iberia reach in 2025?",
+     "modality": "image",
+     "answer": "According to the information provided in the sources, Iberia reached an installed capacity of 620 MW in 2025. This can be seen in Table 1 of the document, which shows the installed capacity by region for 2025.",
+     "latency_s": 45.506,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What share of revenue came from the residential segment?",
+     "modality": "image",
+     "answer": "According to the revenue pie chart in the document, 46% of the revenue came from the residential segment.",
+     "latency_s": 42.923,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What was the average module efficiency in 2025?",
+     "modality": "image",
+     "answer": "According to the information provided in the sources, the average deployed module efficiency from 2019 to 2025 was 23.6%. This can be seen in Figure 3 of the \"Technology\" section of the annual report, which shows the average efficiency of modules deployed in Aurora Solar ASA's projects over the specified period.",
+     "latency_s": 68.459,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What cumulative capacity target has the board set for 2026?",
+     "modality": "text",
+     "answer": "The board has set a target of 3.1 GW of cumulative installed capacity for 2026. [1]",
+     "latency_s": 64.885,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which new market does Aurora plan to enter?",
+     "modality": "text",
+     "answer": "Aurora plans to enter the Polish market in the second half of the year. [2]",
+     "latency_s": 707.469,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "Which firmware version ships with the Helix R7?",
+     "modality": "text",
+     "answer": "The Helix R7 ships with controller firmware HX-OS 4.2.1. [1]",
+     "latency_s": 57.959,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How often must the emergency stop circuit be tested?",
+     "modality": "text",
+     "answer": "According to the Helix R7 manual, the emergency stop circuit must be functionally tested every 250 operating hours and after any collision. [1]",
+     "latency_s": 41.68,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the maximum payload of the Helix R7?",
+     "modality": "table",
+     "answer": "The maximum payload of the Helix R7 is 7 kg [1].",
+     "latency_s": 454.182,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the pose repeatability of the arm?",
+     "modality": "table",
+     "answer": "The pose repeatability of the Helix R7 arm is \u00b10.02 mm. [1]",
+     "latency_s": 197.724,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What IP rating does the Helix R7 have?",
+     "modality": "table",
+     "answer": "The Helix R7 has an ingress protection (IP) rating of IP54. This can be found in Table 1 of the provided documentation.",
+     "latency_s": 56.18,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "Which step comes right after the self-test in the controller startup sequence?",
+     "modality": "image",
+     "answer": "According to the controller startup sequence described in the first source, the step that comes right after the self-test is \"HomeAxes LoadProgram\".",
+     "latency_s": 68.188,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What is the maximum speed of joint J3?",
+     "modality": "image-vector",
+     "answer": "According to the Helix R7 manual, the maximum speed of joint J3 (Elbow) is 180\u00b0/s. [1]",
+     "latency_s": 54.714,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which joint is the shoulder?",
+     "modality": "image-vector",
+     "answer": "According to the Helix R7 manual, the shoulder joint is joint J2. [1]",
+     "latency_s": 37.214,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What does error code E204 mean?",
+     "modality": "table",
+     "answer": "Error code E204 means an encoder fault. This can be corrected by recalibrating the joint encoder. [1]",
+     "latency_s": 133.493,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How do I fix error E305?",
+     "modality": "table",
+     "answer": "To fix error E305, which indicates a communication timeout, you should check the EtherCAT cable. [1]",
+     "latency_s": 45.713,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "How many monitoring stations were sampled on the Tamsin River?",
+     "modality": "text",
+     "answer": "14 monitoring stations were sampled on the Tamsin River. [1]",
+     "latency_s": 146.526,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which station had the highest mean nitrate concentration?",
+     "modality": "image",
+     "answer": "The station with the highest mean nitrate concentration is S6, with a concentration of 12 mg/L. [1]",
+     "latency_s": 68.997,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What nitrate limit is marked on the nitrate chart?",
+     "modality": "image",
+     "answer": "The nitrate limit marked on the nitrate chart is 10 mg/L. This can be seen in Figure 1 of the tamsin_river_water_quality_2024.pdf document, where it shows the mean nitrate concentration by station (mg/L) with a limit of 10 mg/L.",
+     "latency_s": 46.246,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What was the mean turbidity measured in the study?",
+     "modality": "table",
+     "answer": "The mean turbidity measured in the study was 4.6 NTU. [1]",
+     "latency_s": 60.795,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What was the mean dissolved oxygen level?",
+     "modality": "table",
+     "answer": "The mean dissolved oxygen level was 7.9 mg/L. This can be found in Table 1 of the provided document [1].",
+     "latency_s": 35.471,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which treatment plant does the study recommend upgrading?",
+     "modality": "text",
+     "answer": "The study recommends upgrading the Millbrook treatment plant with tertiary nutrient removal by 2027. [4]",
+     "latency_s": 56.751,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "Which vector database does the multimodal RAG system use?",
+     "modality": "text",
+     "answer": "The multimodal RAG system uses Pinecone as the vector database. [3]",
+     "latency_s": 55.33,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which text embedding model is specified in the technology stack?",
+     "modality": "table",
+     "answer": "The text embedding model specified in the technology stack is Hugging Face Sentence-Transformers \u2014 all-MiniLM-L6-v2, which is a free, open-source, widely used model.",
+     "latency_s": 56.442,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "What backend framework is used?",
+     "modality": "table",
+     "answer": "The backend framework used is LangChain (industry-standard RAG orchestration framework).",
+     "latency_s": 42.524,
+     "correct": false,
+     "citation_ok": false
+    },
+    {
+     "question": "What is the minimum RAM requirement?",
+     "modality": "text",
+     "answer": "According to Source [1], the minimum amount of RAM required is 8 GB.",
+     "latency_s": 60.06,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Over how many weeks will the project be completed?",
+     "modality": "text",
+     "answer": "The project will be completed over a 12-week schedule. [1]",
+     "latency_s": 54.728,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "In the Gantt chart, which phase is scheduled for weeks 7-8?",
+     "modality": "image",
+     "answer": "According to the Gantt chart in Figure 3, Phase 6, which involves Frontend Interface and End-to-End Integration, is scheduled for weeks 7-8.",
+     "latency_s": 52.444,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "In the system architecture diagram, which layer sits between the Backend API and the document parser?",
+     "modality": "image",
+     "answer": "The layer that sits between the Backend API and the document parser is the Orchestration Layer. [1]",
+     "latency_s": 49.1,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Who is the faculty mentor of the project?",
+     "modality": "text",
+     "answer": "The faculty mentor of the project is Dr. Manisha Jangid. [1]",
+     "latency_s": 57.675,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "Which modalities are out of scope for the project?",
+     "modality": "text",
+     "answer": "The project will not attempt to support audio or video modalities. [1]",
+     "latency_s": 52.43,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What is the title of the paper that introduced CLIP?",
+     "modality": "text",
+     "answer": "The paper that introduced CLIP is \"Learning Transferable Visual Models from Natural Language Supervision (CLIP)\" by Radford, A., Kim, J. W., et al. [4]",
+     "latency_s": 54.067,
+     "correct": true,
+     "citation_ok": false
+    },
+    {
+     "question": "Which PDF parsing library is used?",
+     "modality": "table",
+     "answer": "According to source [1], the PDF-parsing library used is PyMuPDF (fitz).",
+     "latency_s": 35.433,
+     "correct": true,
+     "citation_ok": true
+    },
+    {
+     "question": "What dividend per share did Aurora Solar pay in 2025?",
+     "modality": "unanswerable",
+     "answer": "I could not find this in the provided documents.",
+     "latency_s": 39.249,
+     "correct": true
+    },
+    {
+     "question": "What is the battery life of the Helix R7 teach pendant?",
+     "modality": "unanswerable",
+     "answer": "I could not find this in the provided documents.",
+     "latency_s": 34.851,
+     "correct": true
+    },
+    {
+     "question": "What was the mercury concentration in the Tamsin River?",
+     "modality": "unanswerable",
+     "answer": "I could not find this in the provided documents.",
+     "latency_s": 59.331,
+     "correct": true
+    }
+   ],
+   "llm": "local: Qwen/Qwen2.5-1.5B-Instruct",
+   "embedding": "BAAI/bge-small-en-v1.5"
+  }
+ }
+}

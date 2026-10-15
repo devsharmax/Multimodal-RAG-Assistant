@@ -1,0 +1,649 @@
+[
+ {
+  "question": "Who is the CEO of Aurora Solar?",
+  "answers": [
+   "Raghunathan"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Where is Aurora Solar headquartered?",
+  "answers": [
+   "Bergen"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "How many employees did Aurora Solar have at the end of 2025?",
+  "answers": [
+   "4,850",
+   "4850"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "What was Aurora Solar's revenue in Q3 2025?",
+  "answers": [
+   "231.9"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What net margin did Aurora report for Q4 2025?",
+  "answers": [
+   "12.8"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "How many MW of new installations were added in Q2 2025?",
+  "answers": [
+   "455"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "Which region had the highest installed capacity in 2025?",
+  "answers": [
+   "Nordics"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "What installed capacity did Iberia reach in 2025?",
+  "answers": [
+   "540"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "What share of revenue came from the residential segment?",
+  "answers": [
+   "46"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "Show me the pie chart of the revenue mix",
+  "answers": [],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image-visual"
+ },
+ {
+  "question": "What was the average module efficiency in 2025?",
+  "answers": [
+   "23.6"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 3,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "What cumulative capacity target has the board set for 2026?",
+  "answers": [
+   "3.1"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 3,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which new market does Aurora plan to enter?",
+  "answers": [
+   "Poland",
+   "Polish"
+  ],
+  "evidence": [
+   {
+    "source": "aurora_annual_report_2025.pdf",
+    "page": 3,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which firmware version ships with the Helix R7?",
+  "answers": [
+   "4.2.1"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "How often must the emergency stop circuit be tested?",
+  "answers": [
+   "250"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "What is the maximum payload of the Helix R7?",
+  "answers": [
+   "7 kg"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What is the pose repeatability of the arm?",
+  "answers": [
+   "0.02"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What IP rating does the Helix R7 have?",
+  "answers": [
+   "IP54"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "Which step comes right after the self-test in the controller startup sequence?",
+  "answers": [
+   "Home Axes",
+   "home the axes",
+   "homing"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "Show the startup sequence flowchart",
+  "answers": [],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image-visual"
+ },
+ {
+  "question": "What is the maximum speed of joint J3?",
+  "answers": [
+   "180"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image-vector"
+ },
+ {
+  "question": "Which joint is the shoulder?",
+  "answers": [
+   "J2"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image-vector"
+ },
+ {
+  "question": "What does error code E204 mean?",
+  "answers": [
+   "Encoder"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 3,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "How do I fix error E305?",
+  "answers": [
+   "EtherCAT"
+  ],
+  "evidence": [
+   {
+    "source": "helix_r7_manual.pdf",
+    "page": 3,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "How many monitoring stations were sampled on the Tamsin River?",
+  "answers": [
+   "14"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which station had the highest mean nitrate concentration?",
+  "answers": [
+   "S4"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 1,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "What nitrate limit is marked on the nitrate chart?",
+  "answers": [
+   "10"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 1,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "What was the mean turbidity measured in the study?",
+  "answers": [
+   "4.6"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What was the mean dissolved oxygen level?",
+  "answers": [
+   "7.9"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 1,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "Show the map of the monitoring stations",
+  "answers": [],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 2,
+    "type": "image"
+   }
+  ],
+  "modality": "image-visual"
+ },
+ {
+  "question": "Which treatment plant does the study recommend upgrading?",
+  "answers": [
+   "Millbrook"
+  ],
+  "evidence": [
+   {
+    "source": "tamsin_river_water_quality_2024.pdf",
+    "page": 2,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which vector database does the multimodal RAG system use?",
+  "answers": [
+   "Pinecone"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 3,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 4,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 6,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 8,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 10,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 15,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which text embedding model is specified in the technology stack?",
+  "answers": [
+   "MiniLM"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 15,
+    "type": "table"
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What backend framework is used?",
+  "answers": [
+   "FastAPI"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 15,
+    "type": "table"
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 12,
+    "type": null
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What is the minimum RAM requirement?",
+  "answers": [
+   "8 GB",
+   "8GB"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 16,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Over how many weeks will the project be completed?",
+  "answers": [
+   "12"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 19,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "In the Gantt chart, which phase is scheduled for weeks 7-8?",
+  "answers": [
+   "Frontend"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 19,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "In the system architecture diagram, which layer sits between the Backend API and the document parser?",
+  "answers": [
+   "Orchestration",
+   "LangChain"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 12,
+    "type": "image"
+   }
+  ],
+  "modality": "image"
+ },
+ {
+  "question": "Who is the faculty mentor of the project?",
+  "answers": [
+   "Manisha Jangid"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 1,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which modalities are out of scope for the project?",
+  "answers": [
+   "audio",
+   "video"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 8,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "What is the title of the paper that introduced CLIP?",
+  "answers": [
+   "Transferable Visual Models"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 21,
+    "type": null
+   }
+  ],
+  "modality": "text"
+ },
+ {
+  "question": "Which PDF parsing library is used?",
+  "answers": [
+   "PyMuPDF"
+  ],
+  "evidence": [
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 15,
+    "type": "table"
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 9,
+    "type": null
+   },
+   {
+    "source": "Multimodal_RAG_Synopsis_final.pdf",
+    "page": 12,
+    "type": null
+   }
+  ],
+  "modality": "table"
+ },
+ {
+  "question": "What dividend per share did Aurora Solar pay in 2025?",
+  "answers": [],
+  "evidence": [],
+  "modality": "unanswerable"
+ },
+ {
+  "question": "What is the battery life of the Helix R7 teach pendant?",
+  "answers": [],
+  "evidence": [],
+  "modality": "unanswerable"
+ },
+ {
+  "question": "What was the mercury concentration in the Tamsin River?",
+  "answers": [],
+  "evidence": [],
+  "modality": "unanswerable"
+ }
+]

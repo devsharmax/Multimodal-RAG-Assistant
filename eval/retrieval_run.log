@@ -1,0 +1,36 @@
+
+== embedding model: sentence-transformers/all-MiniLM-L6-v2
+/Users/tanmayroy/Documents/tau/mmrag/models.py:54: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.model.get_sentence_embedding_dimension()
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+Consider using the pymupdf_layout package for a greatly improved page layout analysis.
+  ingested Multimodal_RAG_Synopsis_final.pdf: {'text': 58, 'table': 1, 'image': 3} in 3.12s
+  ingested aurora_annual_report_2025.pdf: {'text': 4, 'table': 1, 'image': 3} in 0.29s
+  ingested helix_r7_manual.pdf: {'text': 4, 'table': 2, 'image': 2} in 0.23s
+  ingested tamsin_river_water_quality_2024.pdf: {'text': 2, 'table': 1, 'image': 2} in 0.19s
+  dense                        {'n': 42, 'hit@1': 0.6666666666666666, 'hit@3': 0.8571428571428571, 'hit@5': 0.8809523809523809, 'mrr@10': 0.7680555555555555}
+  dense+bm25                   {'n': 42, 'hit@1': 0.6904761904761905, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.8119047619047619}
+  dense+bm25+clip              {'n': 42, 'hit@1': 0.47619047619047616, 'hit@3': 0.7619047619047619, 'hit@5': 0.9523809523809523, 'mrr@10': 0.6507936507936508}
+  hybrid+rerank                {'n': 42, 'hit@1': 0.9047619047619048, 'hit@3': 0.9761904761904762, 'hit@5': 1.0, 'mrr@10': 0.9452380952380953}
+  hybrid+rerank+prior          {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9190476190476191}
+  full (+modality routing)     {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9190476190476191}
+  full, reranker=ms-marco-MiniLM-L-6-v2 {'n': 42, 'hit@1': 0.9047619047619048, 'hit@3': 0.9761904761904762, 'hit@5': 0.9761904761904762, 'mrr@10': 0.9428571428571428}
+  full, reranker=bge-reranker-base {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9190476190476191}
+
+== embedding model: BAAI/bge-small-en-v1.5
+/Users/tanmayroy/Documents/tau/mmrag/models.py:54: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.model.get_sentence_embedding_dimension()
+  ingested Multimodal_RAG_Synopsis_final.pdf: {'text': 58, 'table': 1, 'image': 3} in 3.63s
+  ingested aurora_annual_report_2025.pdf: {'text': 4, 'table': 1, 'image': 3} in 0.31s
+  ingested helix_r7_manual.pdf: {'text': 4, 'table': 2, 'image': 2} in 0.25s
+  ingested tamsin_river_water_quality_2024.pdf: {'text': 2, 'table': 1, 'image': 2} in 0.2s
+  dense                        {'n': 42, 'hit@1': 0.6904761904761905, 'hit@3': 0.8809523809523809, 'hit@5': 0.9047619047619048, 'mrr@10': 0.7916666666666666}
+  dense+bm25                   {'n': 42, 'hit@1': 0.7142857142857143, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.8174603174603176}
+  dense+bm25+clip              {'n': 42, 'hit@1': 0.5238095238095238, 'hit@3': 0.7857142857142857, 'hit@5': 0.9523809523809523, 'mrr@10': 0.6702380952380952}
+  hybrid+rerank                {'n': 42, 'hit@1': 0.9047619047619048, 'hit@3': 0.9761904761904762, 'hit@5': 1.0, 'mrr@10': 0.9452380952380953}
+  hybrid+rerank+prior          {'n': 42, 'hit@1': 0.8571428571428571, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9047619047619048}
+  full (+modality routing)     {'n': 42, 'hit@1': 0.8571428571428571, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9047619047619048}
+  full, reranker=ms-marco-MiniLM-L-6-v2 {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9761904761904762, 'hit@5': 0.9761904761904762, 'mrr@10': 0.9285714285714286}
+  full, reranker=bge-reranker-base {'n': 42, 'hit@1': 0.8571428571428571, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9047619047619048}
+
+wrote /Users/tanmayroy/Documents/tau/eval/results/report.md

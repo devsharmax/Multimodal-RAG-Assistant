@@ -1,0 +1,115 @@
+
+== embedding model: sentence-transformers/all-MiniLM-L6-v2
+/Users/tanmayroy/Documents/tau/mmrag/models.py:54: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.model.get_sentence_embedding_dimension()
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.52, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+  dense                        {'n': 42, 'hit@1': 0.6666666666666666, 'hit@3': 0.8571428571428571, 'hit@5': 0.8809523809523809, 'mrr@10': 0.7680555555555555}
+  dense+bm25                   {'n': 42, 'hit@1': 0.6904761904761905, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.8142857142857144}
+  dense+bm25+clip              {'n': 42, 'hit@1': 0.47619047619047616, 'hit@3': 0.8095238095238095, 'hit@5': 0.9523809523809523, 'mrr@10': 0.6496031746031745}
+  hybrid+rerank                {'n': 42, 'hit@1': 0.9047619047619048, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9484126984126985}
+  hybrid+rerank+prior0.3       {'n': 42, 'hit@1': 0.8571428571428571, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.9047619047619048}
+  full (+modality routing)     {'n': 42, 'hit@1': 0.9285714285714286, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9603174603174603}
+  full, reranker=ms-marco-MiniLM-L-6-v2 {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9761904761904762, 'hit@5': 1.0, 'mrr@10': 0.9305555555555556}
+  full, reranker=bge-reranker-base {'n': 42, 'hit@1': 0.9285714285714286, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9603174603174603}
+
+== embedding model: BAAI/bge-small-en-v1.5
+/Users/tanmayroy/Documents/tau/mmrag/models.py:54: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  self.dim = self.model.get_sentence_embedding_dimension()
+  dense                        {'n': 42, 'hit@1': 0.6904761904761905, 'hit@3': 0.8809523809523809, 'hit@5': 0.9047619047619048, 'mrr@10': 0.7916666666666666}
+  dense+bm25                   {'n': 42, 'hit@1': 0.7142857142857143, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.8174603174603176}
+  dense+bm25+clip              {'n': 42, 'hit@1': 0.5476190476190477, 'hit@3': 0.8333333333333334, 'hit@5': 0.9523809523809523, 'mrr@10': 0.6884920634920635}
+  hybrid+rerank                {'n': 42, 'hit@1': 0.9047619047619048, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9484126984126985}
+  hybrid+rerank+prior0.3       {'n': 42, 'hit@1': 0.8333333333333334, 'hit@3': 0.9523809523809523, 'hit@5': 0.9523809523809523, 'mrr@10': 0.8928571428571429}
+  full (+modality routing)     {'n': 42, 'hit@1': 0.9285714285714286, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9603174603174603}
+  full, reranker=ms-marco-MiniLM-L-6-v2 {'n': 42, 'hit@1': 0.8809523809523809, 'hit@3': 0.9761904761904762, 'hit@5': 1.0, 'mrr@10': 0.9305555555555556}
+  full, reranker=bge-reranker-base {'n': 42, 'hit@1': 0.9285714285714286, 'hit@3': 1.0, 'hit@5': 1.0, 'mrr@10': 0.9603174603174603}
+
+== end-to-end with LLM backend 'extractive' (embedding BAAI/bge-small-en-v1.5)
+  [ok] Who is the CEO of Aurora Solar? -> 'Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people'
+  [ok] Where is Aurora Solar headquartered? -> 'Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people'
+  [ok] How many employees did Aurora Solar have at the end of 2025? -> 'Letter from the Chief Executive\nAurora Solar ASA is headquartered in Bergen, Norway, and employed 4,850 people'
+  [ok] What was Aurora Solar's revenue in Q3 2025? -> '|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q3 2025|231.9|12.2%|502| [1]'
+  [ok] What net margin did Aurora report for Q4 2025? -> '|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q4 2025|248.3|12.8%|540| [1]'
+  [XX] How many MW of new installations were added in Q2 2025? -> '620MW [2] 237MW [2]'
+  [XX] Which region had the highest installed capacity in 2025? -> 'Text in figure: Installed capacity by region, 2025 (MW) [1] Figure 1: Installed capacity by region (MW), 2025\n'
+  [XX] What installed capacity did Iberia reach in 2025? -> '620MW [1] 237MW [1]'
+  [ok] What share of revenue came from the residential segment? -> 'Residential 46% [1] Commercial [1]'
+  [XX] What was the average module efficiency in 2025? -> 'Technology\nModule efficiency is a key driver of the levelised cost of energy. [1] Figure 3: Average deployed m'
+  [ok] What cumulative capacity target has the board set for 2026? -> 'Outlook\nFor 2026, the board has set a target of 3.1 GW of cumulative installed capacity and plans to enter the'
+  [XX] Which new market does Aurora plan to enter? -> '|Quarter|Revenue (USD M)|Net margin|New installations (MW)| |Q1 2025|182.4|9.1%|410| [3]'
+  [ok] Which firmware version ships with the Helix R7? -> 'Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving an'
+  [ok] How often must the emergency stop circuit be tested? -> 'Safety\nThe emergency stop circuit must be functionally tested every 250 operating hours and after any collisio'
+  [ok] What is the maximum payload of the Helix R7? -> '|Parameter|Value| |Maximum payload|7 kg| [1] Helix R7 joint layout and maximum joint speeds\nJoint speeds measu'
+  [ok] What is the pose repeatability of the arm? -> '|Parameter|Value| |Pose repeatability|±0.02 mm| [1]'
+  [XX] What IP rating does the Helix R7 have? -> 'Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving an'
+  [XX] Which step comes right after the self-test in the controller startup s -> 'Startup\nWhen the controller boots it executes a fixed sequence of steps before any program can run. [2]'
+  [ok] What is the maximum speed of joint J3? -> 'Text in figure: J1 Base 120°/s J2 Shoulder 120°/s J3 Elbow 180°/s J4 Wrist roll 250°/s J5 Wrist pitch 250°/s J'
+  [ok] Which joint is the shoulder? -> 'Text in figure: J1 Base 120°/s J2 Shoulder 120°/s J3 Elbow 180°/s J4 Wrist roll 250°/s J5 Wrist pitch 250°/s J'
+  [ok] What does error code E204 mean? -> '|Error code|Meaning|Corrective action| |E204|Encoder fault|Recalibrate the joint encoder| [1]'
+  [ok] How do I fix error E305? -> '|Error code|Meaning|Corrective action| |E305|Communication timeout|Check the EtherCAT cable| [1]'
+  [ok] How many monitoring stations were sampled on the Tamsin River? -> 'Background\nSamples were collected from 14 monitoring stations along the Tamsin River between March and October'
+  [ok] Which station had the highest mean nitrate concentration? -> 'Results\nNitrate concentrations varied substantially between upstream and downstream stations. [1] S1 S2 S3 S4 '
+  [ok] What nitrate limit is marked on the nitrate chart? -> 'Limit10mg/L [1] mg/L 6 6.8 5.3 [1]'
+  [ok] What was the mean turbidity measured in the study? -> '|Parameter|Mean value|Unit| |Turbidity|4.6|NTU| [1]'
+  [ok] What was the mean dissolved oxygen level? -> '|Parameter|Mean value|Unit| |Dissolved oxygen|7.9|mg/L| [1]'
+  [ok] Which treatment plant does the study recommend upgrading? -> 'The study recommends upgrading the Millbrook treatment plant with tertiary nutrient removal by 2027. [1]'
+  [ok] Which vector database does the multimodal RAG system use? -> 'This project, Multimodal RAG based AI System, focuses on designing and implementing such a system using tools '
+  [ok] Which text embedding model is specified in the technology stack? -> '|11 Technology Stack|Col2| | **Text Embedding Model**|Hugging Face Sentence-Transformers — all-MiniLM-L6-v2 (f'
+  [XX] What backend framework is used? -> '6.7 User Interface Module\nA Streamlit-based web interface — one of the most widely used frameworks for buildin'
+  [ok] What is the minimum RAM requirement? -> '● RAM: Minimum 8 GB. [1] ● Storage: Minimum 5 GB available space. [1]'
+  [ok] Over how many weeks will the project be completed? -> '15 Work Plan\nThe project will be completed over a 12-week schedule spanning nine phases, from requirement anal'
+  [ok] In the Gantt chart, which phase is scheduled for weeks 7-8? -> 'Phase 6:Frontend Interface&End-to-End Integration Wk 7-8 [1] The Gantt chart below shows the planned duration '
+  [XX] In the system architecture diagram, which layer sits between the Backe -> 'BackendAPI [1] The general flow of the system is as follows:\nUser → Uploads Document → Document Parser → Multi'
+  [ok] Who is the faculty mentor of the project? -> 'Manisha Jangid Faculty Mentor [1]'
+  [XX] Which modalities are out of scope for the project? -> 'The system is intended as an educational and demonstrative implementation rather than a production- scale ente'
+  [ok] What is the title of the paper that introduced CLIP? -> '“Learning Transferable Visual Models from Natural Language Supervision (CLIP).” arXiv:2103.00020. [3]'
+  [XX] Which PDF parsing library is used? -> 'It uses a PDF-parsing library to walk through each page, extracting raw text, embedded images, and basic tabul'
+  [XX] What dividend per share did Aurora Solar pay in 2025? -> 'Aurora Solar ASA - Annual Report 2025\n1. [2]'
+  [XX] What is the battery life of the Helix R7 teach pendant? -> 'Introduction\nThe Helix R7 is a six-axis collaborative robot arm designed for machine tending, screw driving an'
+  [XX] What was the mercury concentration in the Tamsin River? -> 'Background\nSamples were collected from 14 monitoring stations along the Tamsin River between March and October'
+
+== end-to-end with LLM backend 'local' (embedding BAAI/bge-small-en-v1.5)
+  [ok] Who is the CEO of Aurora Solar? -> 'The CEO of Aurora Solar is Priya Raghunathan. [1]'
+  [ok] Where is Aurora Solar headquartered? -> 'Aurora Solar ASA is headquartered in Bergen, Norway. [1]'
+  [ok] How many employees did Aurora Solar have at the end of 2025? -> 'At the end of 2025, Aurora Solar ASA had 4,850 employees. [1]'
+  [ok] What was Aurora Solar's revenue in Q3 2025? -> "According to Table 1 in the provided document, Aurora Solar's revenue in Q3 2025 was $231.9 million."
+  [ok] What net margin did Aurora report for Q4 2025? -> 'According to Table 1 in the provided document, Aurora reported a net margin of 12.8% for Q4 2025.'
+  [ok] How many MW of new installations were added in Q2 2025? -> 'According to Table 1, in Q2 2025, 455 MW of new installations were added.'
+  [ok] Which region had the highest installed capacity in 2025? -> 'According to Figure 1, Nordics had the highest installed capacity in 2025 with 620 MW.'
+  [XX] What installed capacity did Iberia reach in 2025? -> 'According to the information provided in the sources, Iberia reached an installed capacity of 620 MW in 2025. '
+  [ok] What share of revenue came from the residential segment? -> 'According to the revenue pie chart in the document, 46% of the revenue came from the residential segment.'
+  [ok] What was the average module efficiency in 2025? -> 'According to the information provided in the sources, the average deployed module efficiency from 2019 to 2025'
+  [ok] What cumulative capacity target has the board set for 2026? -> 'The board has set a target of 3.1 GW of cumulative installed capacity for 2026. [1]'
+  [ok] Which new market does Aurora plan to enter? -> 'Aurora plans to enter the Polish market in the second half of the year. [2]'
+  [ok] Which firmware version ships with the Helix R7? -> 'The Helix R7 ships with controller firmware HX-OS 4.2.1. [1]'
+  [ok] How often must the emergency stop circuit be tested? -> 'According to the Helix R7 manual, the emergency stop circuit must be functionally tested every 250 operating h'
+  [ok] What is the maximum payload of the Helix R7? -> 'The maximum payload of the Helix R7 is 7 kg [1].'
+  [ok] What is the pose repeatability of the arm? -> 'The pose repeatability of the Helix R7 arm is ±0.02 mm. [1]'
+  [ok] What IP rating does the Helix R7 have? -> 'The Helix R7 has an ingress protection (IP) rating of IP54. This can be found in Table 1 of the provided docum'
+  [XX] Which step comes right after the self-test in the controller startup s -> 'According to the controller startup sequence described in the first source, the step that comes right after th'
+  [ok] What is the maximum speed of joint J3? -> 'According to the Helix R7 manual, the maximum speed of joint J3 (Elbow) is 180°/s. [1]'
+  [ok] Which joint is the shoulder? -> 'According to the Helix R7 manual, the shoulder joint is joint J2. [1]'
+  [ok] What does error code E204 mean? -> 'Error code E204 means an encoder fault. This can be corrected by recalibrating the joint encoder. [1]'
+  [ok] How do I fix error E305? -> 'To fix error E305, which indicates a communication timeout, you should check the EtherCAT cable. [1]'
+  [ok] How many monitoring stations were sampled on the Tamsin River? -> '14 monitoring stations were sampled on the Tamsin River. [1]'
+  [XX] Which station had the highest mean nitrate concentration? -> 'The station with the highest mean nitrate concentration is S6, with a concentration of 12 mg/L. [1]'
+  [ok] What nitrate limit is marked on the nitrate chart? -> 'The nitrate limit marked on the nitrate chart is 10 mg/L. This can be seen in Figure 1 of the tamsin_river_wat'
+  [ok] What was the mean turbidity measured in the study? -> 'The mean turbidity measured in the study was 4.6 NTU. [1]'
+  [ok] What was the mean dissolved oxygen level? -> 'The mean dissolved oxygen level was 7.9 mg/L. This can be found in Table 1 of the provided document [1].'
+  [ok] Which treatment plant does the study recommend upgrading? -> 'The study recommends upgrading the Millbrook treatment plant with tertiary nutrient removal by 2027. [4]'
+  [ok] Which vector database does the multimodal RAG system use? -> 'The multimodal RAG system uses Pinecone as the vector database. [3]'
+  [ok] Which text embedding model is specified in the technology stack? -> 'The text embedding model specified in the technology stack is Hugging Face Sentence-Transformers — all-MiniLM-'
+  [XX] What backend framework is used? -> 'The backend framework used is LangChain (industry-standard RAG orchestration framework).'
+  [ok] What is the minimum RAM requirement? -> 'According to Source [1], the minimum amount of RAM required is 8 GB.'
+  [ok] Over how many weeks will the project be completed? -> 'The project will be completed over a 12-week schedule. [1]'
+  [ok] In the Gantt chart, which phase is scheduled for weeks 7-8? -> 'According to the Gantt chart in Figure 3, Phase 6, which involves Frontend Interface and End-to-End Integratio'
+  [ok] In the system architecture diagram, which layer sits between the Backe -> 'The layer that sits between the Backend API and the document parser is the Orchestration Layer. [1]'
+  [ok] Who is the faculty mentor of the project? -> 'The faculty mentor of the project is Dr. Manisha Jangid. [1]'
+  [ok] Which modalities are out of scope for the project? -> 'The project will not attempt to support audio or video modalities. [1]'
+  [ok] What is the title of the paper that introduced CLIP? -> 'The paper that introduced CLIP is "Learning Transferable Visual Models from Natural Language Supervision (CLIP'
+  [ok] Which PDF parsing library is used? -> 'According to source [1], the PDF-parsing library used is PyMuPDF (fitz).'
+  [ok] What dividend per share did Aurora Solar pay in 2025? -> 'I could not find this in the provided documents.'
+  [ok] What is the battery life of the Helix R7 teach pendant? -> 'I could not find this in the provided documents.'
+  [ok] What was the mercury concentration in the Tamsin River? -> 'I could not find this in the provided documents.'
+
+wrote /Users/tanmayroy/Documents/tau/eval/results/report.md

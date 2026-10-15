@@ -1,0 +1,30 @@
+# core ML
+torch>=2.3
+transformers>=4.44,<5
+sentence-transformers>=3.0
+pillow
+numpy
+pandas
+# parsing / OCR
+pymupdf>=1.24
+rapidocr-onnxruntime
+# retrieval / orchestration
+langchain-core>=0.3
+langchain-text-splitters
+langchain-openai
+rank-bm25
+pinecone>=5
+huggingface_hub
+pydantic-settings
+# serving
+fastapi
+uvicorn[standard]
+python-multipart
+streamlit
+requests
+accelerate
+# evaluation / tests
+matplotlib
+reportlab
+pytest
+httpx
