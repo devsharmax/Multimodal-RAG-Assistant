@@ -1,9 +1,9 @@
 # Multimodal RAG based AI System
 
-An end-to-end implementation of the synopsis *"Multimodal Retrieval-Augmented Generation (RAG) based AI System"*.
+An end-to-end implementation of "Multimodal Retrieval-Augmented Generation (RAG) based AI System"*.
 You upload PDFs, ask questions in natural language, and get answers grounded in the documents' **text, tables, and figures**. Every answer cites the document, page, and content type it came from.
 
-Stack, as specified in the synopsis: **Python · FastAPI · LangChain · Streamlit · PyMuPDF · Sentence-Transformers · CLIP · Pinecone · Llama 3.1 / Mistral via the Hugging Face Inference API**. Every cloud component also has a free local fallback, so the project runs on an 8 GB laptop without any API keys.
+Stack: **Python · FastAPI · LangChain · Streamlit · PyMuPDF · Sentence-Transformers · CLIP · Pinecone · Llama 3.1 / Mistral via the Hugging Face Inference API**. Every cloud component also has a free local fallback, so the project runs on an 8 GB laptop without any API keys.
 
 ---
 
@@ -48,7 +48,7 @@ The first run downloads about 2.5 GB of open-source models (bge-small, CLIP ViT-
                             numbered context ─► LLM (Llama 3.1 / Mistral / Qwen) ─► answer + [n] citations
 ```
 
-| Synopsis module | Implementation |
+| Implementation |
 |---|---|
 | 6.1 Document Ingestion | [`mmrag/ingestion.py`](mmrag/ingestion.py): text with section headings, tables, raster images, **vector charts/diagrams** (clustered PDF drawings), OCR for scanned pages, caption linking ("Figure 2: …"), header/footer removal |
 | 6.2 Multimodal Embedding | [`mmrag/models.py`](mmrag/models.py): Sentence-Transformers text embedder (a LangChain `Embeddings`), CLIP image/text towers, figure describer (VLM or BLIP + RapidOCR) |
